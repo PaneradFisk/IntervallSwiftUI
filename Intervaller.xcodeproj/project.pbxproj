@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		7F59A8662469CFF50034BF7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F59A8652469CFF50034BF7F /* AppDelegate.swift */; };
 		7F59A8682469CFF50034BF7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F59A8672469CFF50034BF7F /* SceneDelegate.swift */; };
-		7F59A86A2469CFF50034BF7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F59A8692469CFF50034BF7F /* ContentView.swift */; };
+		7F59A86A2469CFF50034BF7F /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F59A8692469CFF50034BF7F /* SetupView.swift */; };
 		7F59A86C2469CFF70034BF7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F59A86B2469CFF70034BF7F /* Assets.xcassets */; };
 		7F59A86F2469CFF70034BF7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F59A86E2469CFF70034BF7F /* Preview Assets.xcassets */; };
 		7F59A8722469CFF70034BF7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F59A8702469CFF70034BF7F /* LaunchScreen.storyboard */; };
+		7F9885D72469D87F005F919E /* workoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9885D62469D87F005F919E /* workoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F59A8622469CFF50034BF7F /* Intervaller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Intervaller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F59A8652469CFF50034BF7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F59A8672469CFF50034BF7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F59A8692469CFF50034BF7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7F59A8692469CFF50034BF7F /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		7F59A86B2469CFF70034BF7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F59A86E2469CFF70034BF7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F59A8712469CFF70034BF7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F59A8732469CFF70034BF7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F9885D62469D87F005F919E /* workoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				7F59A8652469CFF50034BF7F /* AppDelegate.swift */,
 				7F59A8672469CFF50034BF7F /* SceneDelegate.swift */,
-				7F59A8692469CFF50034BF7F /* ContentView.swift */,
+				7F59A8692469CFF50034BF7F /* SetupView.swift */,
+				7F9885D62469D87F005F919E /* workoutView.swift */,
 				7F59A86B2469CFF70034BF7F /* Assets.xcassets */,
 				7F59A8702469CFF70034BF7F /* LaunchScreen.storyboard */,
 				7F59A8732469CFF70034BF7F /* Info.plist */,
@@ -148,7 +151,8 @@
 			files = (
 				7F59A8662469CFF50034BF7F /* AppDelegate.swift in Sources */,
 				7F59A8682469CFF50034BF7F /* SceneDelegate.swift in Sources */,
-				7F59A86A2469CFF50034BF7F /* ContentView.swift in Sources */,
+				7F9885D72469D87F005F919E /* workoutView.swift in Sources */,
+				7F59A86A2469CFF50034BF7F /* SetupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 				DEVELOPMENT_TEAM = 2DUVW34V99;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Intervaller/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrebergvall.Intervaller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +314,7 @@
 				DEVELOPMENT_TEAM = 2DUVW34V99;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Intervaller/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrebergvall.Intervaller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
