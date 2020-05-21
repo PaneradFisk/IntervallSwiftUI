@@ -11,21 +11,17 @@ import SwiftUI
 struct ContentView: View {
     
     
-    @State var sets: Float = 0
-    @State var ex: Float = 0
-    @State var exTime: Float = 0
+    @State var sets: Float = 1
+    @State var ex: Float = 1
+    @State var exTime: Float = 10
     @State var restTime: Float = 0
     @State var breakTime: Float = 0
     
     var totalTimeInSeconds: Float{
         let totalExTimePerSet = Float(exTime*ex)
-        print(totalExTimePerSet)
         let totalBreakTimePerSet = Float(breakTime*(ex-1))
-        print(totalBreakTimePerSet)
         let totalRestTime = Float(restTime*(sets-1))
-        print(totalRestTime)
         let totalTime = Float((sets*(totalBreakTimePerSet+totalExTimePerSet))+totalRestTime)
-        print(totalTime)
         return totalTime
     }
     
@@ -65,11 +61,13 @@ struct ContentView: View {
                             Slider(value: self.$breakTime, in: 0.0...60.0, step: 5.0)
                                 .frame(width: ((geo.size.width/2)-(geo.size.width/20)), alignment: .trailing)
                         }
-                        HStack{
-                            Text("Rest time: \(Int(self.restTime))s")
-                                .frame(width: ((geo.size.width/2)-(geo.size.width/20)), alignment: .leading)
-                            Slider(value: self.$restTime, in: 0.0...120.0, step: 10.0)
-                                .frame(width: ((geo.size.width/2)-(geo.size.width/20)), alignment: .trailing)
+                        if self.sets >= 2{
+                            HStack{
+                                Text("Rest time: \(Int(self.restTime))s")
+                                    .frame(width: ((geo.size.width/2)-(geo.size.width/20)), alignment: .leading)
+                                Slider(value: self.$restTime, in: 0.0...120.0, step: 10.0)
+                                    .frame(width: ((geo.size.width/2)-(geo.size.width/20)), alignment: .trailing)
+                            }
                         }
                         HStack{
                             Text("Total time: ")
